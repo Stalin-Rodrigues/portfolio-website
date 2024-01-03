@@ -1,0 +1,709 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset default styles */
+*{
+	font-family:'Poppins', sans-sref;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f5f8;
+}
+
+nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 80px;
+  line-height: 80px;
+  z-index: 111;
+}
+
+.Logo{
+	display: flex;
+	font-size: 30px;
+	font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;	
+}
+
+b{
+	font-size: 30px;
+	color: #7f00ff;
+}
+
+.navItems{
+	display: flex;
+}
+
+.navItems li{
+	list-style: none;
+	margin: 5px 15px;
+}
+
+.navItems li a{
+	font-size: 25px;
+	color: #3d535f;
+	letter-spacing: 3px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.navItems a:hover,
+.navItems a.active{
+    color: #7f00ff;
+}
+.links a:hover{
+	color: #0056b3;
+}
+
+.links a{
+	font-size: 30px;
+	color: #7f00ff;
+	margin: 5px 10px;
+}
+
+.wrapper{
+	display: flex;
+	width: 100%;
+	height: calc(100vh - 80px);
+	justify-content: center;
+	align-items: center;
+	padding: 0 10%;
+	overflow: hidden;
+}
+
+.wrapper::before{
+	position: absolute;
+	content: '';
+	height: 600px;
+	width: 600px;
+	border-radius: 50%;
+	left: -12%;
+	top: 40%;
+	background: linear-gradient(45deg,#7f00ff,pink);
+	animation: object1 6s linear infinite;
+}
+
+.wrapper::after{
+	position: absolute;
+	content: '';
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	left: 35%;
+	top: 12%;
+	background: linear-gradient(45deg,#7f00ff,pink);
+	animation: object2 6s linear infinite;
+}
+
+@keyframes object1{
+	50%{
+		left: -13%;
+		top: 41%;
+	}
+}
+@keyframes object2{
+	50%{
+		left: 35%;
+		top: 10%;
+	}
+}
+
+.cols{
+	width: 50%;
+}
+
+.cols0{
+	width: 60%;
+	z-index: 5;
+}
+
+.topline{
+	display: block;
+	position: relative;
+	font-size: 35px;
+	letter-spacing: 5px;
+	color: #3d535f;
+}
+
+.topline::after{
+	position: absolute;
+	content: '';
+	height: 4px;
+	width: 45px;
+	bottom: 10px;
+	background-color: #7f00ff;
+}
+
+h1{
+	display: block;
+	font-size: 3.5em;
+	font-weight: 600;
+	color: #3d535f;
+}
+
+/* Typing effect */
+.multitext{
+	color: #7f00ff;
+	text-transform: capitalize;
+	font-size: 32px;
+}
+
+p{
+	display: block;
+	width: 90%;
+	font-size: 1.2em;
+	color: 3d535f;
+}
+
+.btns{
+	width: 100%;
+	position: center;
+	left: 150px;
+}
+
+button{
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-size: 25px;
+	font-weight: 400;
+	color: #fff;
+	background-color: #3d535f;
+	padding: 8px 14px;
+	margin: 40px 5px;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	box-shadow: 0 15px 10px rgba(0,0,0,0.4);
+}
+
+button:hover{
+	background-color: #7f00ff;
+}
+
+.imgbox{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.imgbox img{
+	position: relative;
+	height: 100%;
+	width: calc(130% - 80px);
+	top: -100px;
+	right: 50px;
+    transform: rotateY(180deg);
+    animation: animateUser 4s linear infinite;
+}
+@keyframes animateUser{
+	50%{
+		right: 0.5px;
+		top: -80px;
+		top: 30%;
+		width: 125%;
+	}
+}
+
+/* About section */
+.about {
+    background-color: #fff;
+    padding: 150px 0;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.column.left img,
+.column.right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.column.right .text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.column.right p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Skills section */
+.skills {
+    background-color: #f7f7f7;
+    padding: 180px 0;
+}
+
+.skills .max-width {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.skills .title {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-content .column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.skills-content .column.left {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.skills-content .column.left .text {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.skills-content .column.left p {
+    font-size: 16px;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.skills-content .column.left a {
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.skills-content .column.right {
+    flex: 1;
+    max-width: 300px;
+}
+
+.skills-content .column.right .bars {
+    margin-bottom: 20px;
+}
+
+.skills-content .column.right .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #7f00ff;
+}
+
+.skills-content .column.right .line {
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-content .column.right .line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #7f00ff;
+    border-radius: 5px;
+    animation: fillWidth 2s ease-in-out forwards; 
+}
+
+@keyframes progressBarAnimationWeb {
+    0% { width: 0; }
+    90% { width: 90%; } /* Animation stops at 70% */
+    100% { width: 90%; } /* Ensure it stays at 70% */
+}
+
+@keyframes progressBarAnimationJava {
+    0% { width: 0; }
+    80% { width: 80%; } /* Animation stops at 70% */
+    100% { width: 80%; } /* Ensure it stays at 70% */
+}
+
+@keyframes progressBarAnimationPy {
+    0% { width: 0; }
+    85% { width: 85%; } /* Animation stops at 70% */
+    100% { width: 85%; } /* Ensure it stays at 70% */
+}
+
+@keyframes progressBarAnimationFlutter {
+    0% { width: 0; }
+    75% { width: 75%; } /* Animation stops at 70% */
+    100% { width: 75%; } /* Ensure it stays at 70% */
+}
+
+@keyframes progressBarAnimationMysql {
+    0% { width: 0; }
+    70% { width: 70%; } /* Animation stops at 70% */
+    100% { width: 70%; } /* Ensure it stays at 70% */
+}
+
+
+
+.progress {
+    height: 20px;
+    background-color: #ccc;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-web {
+    height: 100%;
+    background-color: #7f00ff; /* Change this color to your preferred progress bar color */
+    animation: progressBarAnimationWeb 2s ease-in-out forwards; /* Adjust the duration as needed */
+    border-radius: 3px;
+}
+
+.progress-bar-java {
+    height: 100%;
+    background-color: #7f00ff; /* Change this color to your preferred progress bar color */
+    animation: progressBarAnimationJava 2s ease-in-out forwards; /* Adjust the duration as needed */
+    border-radius: 3px;
+}
+
+.progress-bar-py {
+    height: 100%;
+    background-color: #7f00ff; /* Change this color to your preferred progress bar color */
+    animation: progressBarAnimationPy 2s ease-in-out forwards; /* Adjust the duration as needed */
+    border-radius: 3px;
+}
+
+.progress-bar-flutter {
+    height: 100%;
+    background-color: #7f00ff; /* Change this color to your preferred progress bar color */
+    animation: progressBarAnimationFlutter 2s ease-in-out forwards; /* Adjust the duration as needed */
+    border-radius: 3px;
+}
+
+.progress-bar-mysql {
+    height: 100%;
+    background-color: #7f00ff; /* Change this color to your preferred progress bar color */
+    animation: progressBarAnimationMysql 2s ease-in-out forwards; /* Adjust the duration as needed */
+    border-radius: 3px;
+}
+
+/* Material Icons */
+.material-icons {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Styling for the contact section */
+.contact {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.max-width {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: left;
+}
+
+.text {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.icons {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.material-icons {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.info {
+    font-size: 18px;
+}
+
+.head {
+    font-weight: bold;
+}
+
+.sub-title {
+    color: #777;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.button-area {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #7f00ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* For headline */
+.title {
+    text-align: center;
+}
+
+.text{
+	color: #7f00ff;
+}
+
+.head{
+	color: #7f00ff;
+}
+
+.text0{
+	color: #7f00ff;
+}
+
+
+/* Media query for screens with a maximum width of 1000px */
+@media screen and (max-width: 1000px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    .Logo {
+       font-size: 24px;
+	   margin-top: 2em;
+    }
+    
+    .navItems {
+        display: none;
+    }
+    
+    .navItems li {
+        display: none;
+    }
+    
+    .wrapper {
+        flex-direction: column-reverse;
+        padding: 0 5%;
+    }
+	
+	
+	.wrapper::before{
+        display: none;
+    }
+
+    .wrapper::after{
+	    display: none;
+    }
+	
+    
+    .cols {
+        width: 100%;
+    }
+    
+    .cols0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    .multitext {
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 1em;
+        width: 100%;
+    }
+    
+    .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    button {
+        font-size: 18px;
+        padding: 6px 12px;
+        margin: 10px 0;
+    }
+    
+    .imgbox img {
+        width: 50%;
+        top: 3px;
+		display: block;
+        margin-left: 280px;
+		margin-right: auto;
+        transform: none;
+        animation: none;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .column.left,
+    .column.right {
+        padding: 0;
+        text-align: center;
+    }
+    
+    .column.left img {
+        display: none;
+    }
+    
+    .column.right .text {
+        font-size: 20px;
+    }
+    
+    .skills-content .column {
+        margin-bottom: 40px;
+    }
+    
+    .skills-content .column.right {
+        max-width: 100%;
+    }
+    
+    .contact-content .column {
+        text-align: center;
+    }
+    
+    .text {
+        font-size: 20px;
+    }
+    
+    .icons .row {
+        justify-content: center;
+    }
+    
+    .row .material-icons {
+        font-size: 20px;
+    }
+    
+    .info {
+        font-size: 16px;
+    }
+    
+    .button-area {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 786px) {
+	.imgbox img {
+        width: 80%;
+        top: 3px;
+		display: block;
+        margin-left: 100px;
+		margin-right: auto;
+        transform: none;
+        animation: none;
+    }
+	
+	/* Typing effect */
+    .multitext{
+	    color: #7f00ff;
+	    text-transform: capitalize;
+		font-size: 35px;
+    }
+
+}
+
